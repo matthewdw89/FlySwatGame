@@ -1,0 +1,195 @@
+body{
+  background-image: url('./bg.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  overflow: hidden;
+  font-family: 'Luckiest Guy', cursive;
+}
+.audio{
+  display: none;
+}
+
+button{
+  cursor: pointer;
+}
+
+// ---- START WINDOW
+
+.start__wall{
+  height: 100vh;
+  width: 100vw;
+  cursor: pointer;
+}
+
+.start__window{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  .start__box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 50%;
+    width: 50%;
+    margin: 0 auto;
+    background:  rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+  
+      h1{
+        color: #fff;
+        font-size: 5.5rem;
+      }
+      button{
+        padding: 15px;
+        width: 150px;
+        font-size: 1.5rem;
+        border-radius: 5px;
+        font-family: 'Luckiest Guy', cursive;
+      }
+  }
+}
+
+// ----- GAME
+
+.wall {
+  height: 100vh;
+  width: 100vw;
+  cursor: none;
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  align-items: center;  
+
+  .header--top{
+    display: flex;
+    justify-content: space-between;
+    width: 70%
+  }  
+  .levels,.timer,.highest{
+    padding: 50px;
+    font-size: 30px;
+    text-align: center;
+  }
+  .levels,.timer{
+    width: 50%;
+  }
+  .highest{
+    width: 30%;
+  }
+}
+#alive{
+  width: 90px;
+  height: 90px;
+  position: fixed;
+  transition: top 2s, left 2s;
+
+  img{
+    width: 100%;
+    height: 100%;
+
+  }
+}
+#dead{
+  width: 90px;
+  height: 90px;
+  position: fixed;
+  transition: top 3s, left 3s;
+    img{
+    width: 100%;
+    height: 100%;
+
+  }
+}
+
+// ----- Level Complete Screen
+
+.compelete__level{
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size:3rem;
+  flex-direction: column;
+  text-align: center;
+
+    button{
+        padding: 15px;
+        width: 200px;
+        font-size: 1.5rem;
+        border-radius: 5px;
+        font-family: 'Luckiest Guy', cursive;
+      }
+}
+
+// ----- Game Over Screen
+
+.gameover{
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size:5rem;
+  flex-direction: column;
+  text-align: center;
+
+    button{
+        padding: 15px;
+        width: 200px;
+        font-size: 1.5rem;
+        border-radius: 5px;
+        font-family: 'Luckiest Guy', cursive;
+      }
+}
+
+
+
+#player{
+  position: absolute;
+  width: 80px;
+  height: 120px;
+  pointer-events: none;
+}
+
+// ----- Media Queries 
+
+@media screen and (max-width: 760px){
+
+  .start__window{
+    .start__box{
+      min-width: 300px;
+      h1{
+        font-size: 4rem;
+      }
+    }
+  }
+  .header{
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    
+    .header--top{
+      width: 100%
+    }
+  }
+  .compelete__level{
+    font-size: 1.8rem;
+  }
+  .gameover{
+    font-size: 3rem;
+  }
+  #player{
+    display: none;
+  }
+  .wall{
+    cursor: pointer;
+    
+  }
+}
