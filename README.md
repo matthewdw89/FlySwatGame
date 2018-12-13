@@ -14,3 +14,6 @@ $ npm install
 $ npm start
 
 ```
+## To-do
+* `fix bugs when used on safari`
+
