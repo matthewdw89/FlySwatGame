@@ -16,4 +16,4 @@ $ npm start
 ```
 ## To-do
 * `fix bugs when used on safari`
-
+* `have high score saved locally`
