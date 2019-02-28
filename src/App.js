@@ -86,7 +86,7 @@ class App extends Component {
   }
 
   InsectHit = (index)=>{
-    this.splat.play();
+    // this.splat.play();    // Commented out due to errors in Safari for ios
     let currentLeft = this.state.bugs[index].insectPos.left
     let bugsCopy = [...this.state.bugs];
     bugsCopy[index] = {
