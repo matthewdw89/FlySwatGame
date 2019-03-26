@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import StartingMusic from './StartingMusic'
 
 export default class Start extends Component {
   render() {
