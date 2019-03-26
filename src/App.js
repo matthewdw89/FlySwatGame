@@ -1,4 +1,3 @@
-// // "proxy": "http://localhost:3000"
 import React, { Component } from 'react';
 import './App.css';
 import Start from './components/Start';
