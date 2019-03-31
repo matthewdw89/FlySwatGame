@@ -4,7 +4,6 @@ import Insect from './Insect';
 export default class InsectList extends Component {
 
   componentDidMount() {
-    // console.log("mounted")
     this.props.bugs.forEach((each) => {
         this.props.moveInsect(each)
     });
@@ -16,7 +15,6 @@ export default class InsectList extends Component {
   }
 
   componentDidUpdate(){
-    // console.log("updated")
     let numberDead = [];
     this.props.bugs.forEach( bug => {
       if(bug.insectAlive === false){

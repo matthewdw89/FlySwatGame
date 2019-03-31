@@ -1,4 +1,3 @@
-// // "proxy": "http://localhost:3000"
 import React, { Component } from 'react';
 import './App.css';
 import Start from './components/Start';
@@ -27,7 +26,7 @@ class App extends Component {
       left:0,
       top:0
     },
-    currentLevel: 1,
+    currentLevel: 25,
     leveltimer: 20,
     bugs: [],
     increaseLevel: false,
@@ -102,7 +101,6 @@ class App extends Component {
   }
 
   increaseLevel = () => {
-    console.log("increase")
     this.setState({
       currentLevel: this.state.currentLevel + 1,
       increaseLevel: true,
@@ -115,7 +113,6 @@ class App extends Component {
     }
   }
   nextLevel = () =>{
-    console.log("next")
     this.setState({
       increaseLevel:false,
       leveltimer: 20
@@ -148,8 +145,8 @@ class App extends Component {
     return insect;
   }
 
-  componentDidMount() {
-    
+  componentWillUnmount() {
+    this.backgroundAudio.pause();
   }
 
   render() {
