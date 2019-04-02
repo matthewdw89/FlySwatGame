@@ -26,7 +26,7 @@ class App extends Component {
       left:0,
       top:0
     },
-    currentLevel: 25,
+    currentLevel: 1,
     leveltimer: 20,
     bugs: [],
     increaseLevel: false,
@@ -167,7 +167,7 @@ class App extends Component {
       }
       else if(this.state.leveltimer > 0){
         return (
-          <div className="wall" ref={this.wall} flySound={this.flySound.play()} onClick={() => {this.hit.play()}} onMouseMove={this.playerPos}>
+          <div className="wall" ref={this.wall} flysound={this.flySound.play()} onClick={() => {this.hit.play()}} onMouseMove={this.playerPos}>
             <Header time={this.state.leveltimer} level={this.state.currentLevel} highest={this.state.highestLevel}></Header>
             <InsectList bugs={this.state.bugs} hit={this.InsectHit} moveInsect={this.moveInsect} increaseLevel={this.increaseLevel} level={this.state.currentLevel}></InsectList>
             <Player ref={(ref) => {this.playerPosition = ref}} position={this.state.playerPos}></Player>
