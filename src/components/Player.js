@@ -1,12 +1,9 @@
 import React from 'react'
 
-const Player = ({playerRef, position }) => {
-
+const Player = ({position}) => {
   return (
-      <div ref={playerRef} >
-          <img id="player" src='./images/player.png' style={position} alt="A cartoon drawing of a swatter that has arms and legs"></img>
-      </div>
+    <img id="player" src='./images/player.png' style={position} alt="A cartoon drawing of a swatter that has arms and legs"></img>
   )
 }
 
-export default Player;
+export default Player

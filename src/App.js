@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import './App.scss';
 import Start from './components/Start';
 import Header from './components/Header';
 import InsectList from './components/InsectList'
@@ -10,14 +10,12 @@ import CompleteLevel from './components/CompleteLevel';
 class App extends Component {
   constructor(){
     super()
-    this.wall = React.createRef();
-    this.insect1 = React.createRef();
-    this.playerPosition= React.createRef();
     this.backgroundAudio = new Audio('/music/A Bugs Life Game Soundtrack - Anthill.mp3');
     this.splat = new Audio('/music/splat2.mp3');
     this.hit = new Audio('/music/hit.mp3');
     this.gameOver = new Audio('/music/gameover.mp3')
     this.flySound = new Audio('/music/flySound.mp3')
+    this.timer = null
   }
 
   state = {
@@ -36,9 +34,9 @@ class App extends Component {
   gameStart = () => {
     this.setState({
       startPage:false
-    })
-    this.bugGenerate(this.state.currentLevel)
-    this.countDown()
+    });
+    this.bugGenerate(this.state.currentLevel);
+    this.countDown();
     this.backgroundAudio.play();
   }
 
@@ -47,21 +45,16 @@ class App extends Component {
       startPage: true,
       leveltimer: 20,
       currentLevel: 1
-    })
+    });
   }
 
   countDown = () => {
-    let timer = setInterval( ()=>{
+    if((this.state.increaseLevel) || (this.state.leveltimer === 0)) clearInterval(this.timer);
+    this.timer = setInterval( () => {
       this.setState({
         leveltimer: this.state.leveltimer - 1
-      }, () => {
-        if (this.state.increaseLevel === true){
-          clearInterval(timer);
-        }
-        if (this.state.leveltimer === 0) {
-          clearInterval(timer);
-        }
-      }) }, 1000)
+      })
+    }, 1000);
   }
 
   bugGenerate = (level) => {
@@ -76,17 +69,17 @@ class App extends Component {
         insectPos: {
           top: nh,
           left: nw,
-        }}
+        }};
       buglist.push(newbug);
       this.setState({
         bugs: buglist
-      })
+      });
     }
   }
 
   InsectHit = (index)=>{
     // this.splat.play();    // Commented out due to errors in Safari for ios
-    let currentLeft = this.state.bugs[index].insectPos.left
+    let currentLeft = this.state.bugs[index].insectPos.left;
     let bugsCopy = [...this.state.bugs];
     bugsCopy[index] = {
       insectAlive: false,
@@ -94,10 +87,10 @@ class App extends Component {
         top: window.innerHeight + 400,
         left: currentLeft,
       }
-    }
+    };
     this.setState({
       bugs: bugsCopy
-    })
+    });
   }
 
   increaseLevel = () => {
@@ -123,14 +116,14 @@ class App extends Component {
 
   playerPos = (e) =>{
     e.persist();
-    let y = e.screenY
-    let x = e.screenX
+    let y = e.screenY;
+    let x = e.screenX;
     this.setState({
       playerPos: {
         left: x -35,
         top: y -125
       }
-    })
+    });
   }
 
   moveInsect = (insect) => {
@@ -141,7 +134,7 @@ class App extends Component {
     insect.insectPos = {
       top: nh,
       left: nw
-    }
+    };
     return insect;
   }
 
@@ -170,7 +163,7 @@ class App extends Component {
           <div className="wall" ref={this.wall} flysound={this.flySound.play()} onClick={() => {this.hit.play()}} onMouseMove={this.playerPos}>
             <Header time={this.state.leveltimer} level={this.state.currentLevel} highest={this.state.highestLevel} />
             <InsectList bugs={this.state.bugs} hit={this.InsectHit} moveInsect={this.moveInsect} increaseLevel={this.increaseLevel} level={this.state.currentLevel} />
-            <Player ref={(ref) => {this.playerPosition = ref}} position={this.state.playerPos} />
+            <Player position={this.state.playerPos} />
           </div>
         )
       }

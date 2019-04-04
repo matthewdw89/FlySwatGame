@@ -1,5 +1,4 @@
 import React from 'react';
-import { prototype } from 'events';
 
 const Insect = ({alive, hit, id, style}) => {
 
