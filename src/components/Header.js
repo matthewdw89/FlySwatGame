@@ -3,9 +3,7 @@ import React, { Component } from 'react'
 export default class Header extends Component {
   render() {
     let timeStyle;
-    if(this.props.time <= 5){
-      timeStyle = {color: "red"}
-    }
+    if (this.props.time <= 5) timeStyle = {color: "red"}
     return (
       <header className="header">
         <div className="header--top">
