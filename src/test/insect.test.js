@@ -15,8 +15,21 @@ describe('<Insect>', () => {
   it('should register a click', () => {
     let clickFn = jest.fn();
     const component = shallow(<Insect hit={clickFn}/>);
-    component.simulate('click')
+    component.simulate('click');
     expect(clickFn).toHaveBeenCalled();
   });
+
+  it('should have a different id when dead', () => {
+    let alive = false;
+    const component = shallow(<Insect alive={alive} />);
+    expect(component.find('#dead').exists()).toEqual(true);
+  });
+
+  it('should have a different image when dead', () => {
+    let alive = false;
+    const component = shallow(<Insect alive={alive} />);
+    console.log(component.debug())
+    expect(component.find('img').prop('src')).toEqual('./images/bug2Dead.svg')
+  })
 
 });

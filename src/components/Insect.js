@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 
-export default class Insect extends Component {
+const Insect = ({alive, hit, id, style}) => {
 
-  render() {
-      let bugImg= this.props.alive ? 'alive' : 'dead'; 
-    return (
-        <div onClick={() => { this.props.hit(this.props.id) }} style={this.props.style} id={bugImg}>
-            <img src={this.props.alive ? './images/bug2.png' : './images/bug2Dead.svg'} alt="Bug"/>
-        </div>
-    )
-  }
-}
+  let bugImg= alive ? 'alive' : 'dead'; 
+  return (
+      <div onClick={() => { hit(id) }} style={style} id={bugImg}>
+          <img src={alive ? './images/bug2.png' : './images/bug2Dead.svg'} alt="Bug"/>
+      </div>
+  )
+};
+
+export default Insect;
