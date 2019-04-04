@@ -37,7 +37,7 @@ export default class InsectList extends Component {
                     style={each.insectPos}
                     key={i}
                     id={i}
-                  ></Insect>
+                  />
               })
           }
       </div>

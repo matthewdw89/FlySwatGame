@@ -153,7 +153,7 @@ class App extends Component {
     if(this.state.startPage){
       return(
         <div className="start__wall" ref={this.wall}>
-          <Start gameStart={this.gameStart}></Start>
+          <Start gameStart={this.gameStart} />
         </div>
       )
     }
@@ -161,23 +161,23 @@ class App extends Component {
       if(this.state.increaseLevel){
         return(
           <div className="start__wall" ref={this.wall}>
-            <CompleteLevel nextlevel={this.nextLevel}></CompleteLevel>
+            <CompleteLevel nextlevel={this.nextLevel} />
           </div>
         ) 
       }
       else if(this.state.leveltimer > 0){
         return (
           <div className="wall" ref={this.wall} flysound={this.flySound.play()} onClick={() => {this.hit.play()}} onMouseMove={this.playerPos}>
-            <Header time={this.state.leveltimer} level={this.state.currentLevel} highest={this.state.highestLevel}></Header>
-            <InsectList bugs={this.state.bugs} hit={this.InsectHit} moveInsect={this.moveInsect} increaseLevel={this.increaseLevel} level={this.state.currentLevel}></InsectList>
-            <Player ref={(ref) => {this.playerPosition = ref}} position={this.state.playerPos}></Player>
+            <Header time={this.state.leveltimer} level={this.state.currentLevel} highest={this.state.highestLevel} />
+            <InsectList bugs={this.state.bugs} hit={this.InsectHit} moveInsect={this.moveInsect} increaseLevel={this.increaseLevel} level={this.state.currentLevel} />
+            <Player ref={(ref) => {this.playerPosition = ref}} position={this.state.playerPos} />
           </div>
         )
       }
       else{
         return(
           <div className="start__wall" ref={this.wall}>
-            <Gameover gameoverSound={this.gameOver.play()} playAgain={this.playAgain}></Gameover>
+            <Gameover gameoverSound={this.gameOver.play()} playAgain={this.playAgain} />
           </div>
         ) 
       }
