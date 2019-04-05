@@ -10,4 +10,5 @@ const Insect = ({alive, hit, id, style}) => {
   )
 };
 
+
 export default Insect;

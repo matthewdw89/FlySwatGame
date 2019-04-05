@@ -9,14 +9,14 @@ import CompleteLevel from './components/CompleteLevel';
 
 class App extends Component {
   constructor(){
-    super()
+    super();
     this.backgroundAudio = new Audio('/music/A Bugs Life Game Soundtrack - Anthill.mp3');
     this.splat = new Audio('/music/splat2.mp3');
     this.hit = new Audio('/music/hit.mp3');
-    this.gameOver = new Audio('/music/gameover.mp3')
-    this.flySound = new Audio('/music/flySound.mp3')
-    this.timer = null
-  }
+    this.gameOver = new Audio('/music/gameover.mp3');
+    this.flySound = new Audio('/music/flySound.mp3');
+    this.timer = null;
+  };
 
   state = {
     startPage: true,
@@ -29,7 +29,7 @@ class App extends Component {
     bugs: [],
     increaseLevel: false,
     highestLevel: 1
-  }
+  };
   
   gameStart = () => {
     this.setState({

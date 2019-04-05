@@ -1,20 +1,178 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Start> should render correctly 1`] = `
-<div
-  className="start__window"
->
-  <div
-    className="start__box"
-  >
-    <h1>
-      SWAT
-    </h1>
-    <button
-      title="The aim of the game is remove all the pesky bugs within a set timer"
-    >
-      START
-    </button>
-  </div>
-</div>
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Start />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": <div
+        className="start__box"
+      >
+        <h1>
+          SWAT
+        </h1>
+        <button
+          title="The aim of the game is remove all the pesky bugs within a set timer"
+        >
+          START
+        </button>
+      </div>,
+      "className": "start__window",
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h1>
+            SWAT
+          </h1>,
+          <button
+            title="The aim of the game is remove all the pesky bugs within a set timer"
+          >
+            START
+          </button>,
+        ],
+        "className": "start__box",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "SWAT",
+          },
+          "ref": null,
+          "rendered": "SWAT",
+          "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "START",
+            "onClick": undefined,
+            "title": "The aim of the game is remove all the pesky bugs within a set timer",
+          },
+          "ref": null,
+          "rendered": "START",
+          "type": "button",
+        },
+      ],
+      "type": "div",
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <div
+          className="start__box"
+        >
+          <h1>
+            SWAT
+          </h1>
+          <button
+            title="The aim of the game is remove all the pesky bugs within a set timer"
+          >
+            START
+          </button>
+        </div>,
+        "className": "start__window",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h1>
+              SWAT
+            </h1>,
+            <button
+              title="The aim of the game is remove all the pesky bugs within a set timer"
+            >
+              START
+            </button>,
+          ],
+          "className": "start__box",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "SWAT",
+            },
+            "ref": null,
+            "rendered": "SWAT",
+            "type": "h1",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "START",
+              "onClick": undefined,
+              "title": "The aim of the game is remove all the pesky bugs within a set timer",
+            },
+            "ref": null,
+            "rendered": "START",
+            "type": "button",
+          },
+        ],
+        "type": "div",
+      },
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
 `;

@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Player> should render correctly 1`] = `
+exports[`<App> renders without crashing 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Player />,
+  Symbol(enzyme.__unrendered__): <App />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "checkPropTypes": [Function],
@@ -18,14 +18,24 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "alt": "A cartoon drawing of a swatter that has arms and legs",
-      "id": "player",
-      "src": "./images/player.png",
-      "style": undefined,
+      "children": <Start
+        gameStart={[Function]}
+      />,
+      "className": "start__wall",
     },
     "ref": null,
-    "rendered": null,
-    "type": "img",
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "gameStart": [Function],
+      },
+      "ref": null,
+      "rendered": null,
+      "type": [Function],
+    },
+    "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
@@ -33,14 +43,24 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "alt": "A cartoon drawing of a swatter that has arms and legs",
-        "id": "player",
-        "src": "./images/player.png",
-        "style": undefined,
+        "children": <Start
+          gameStart={[Function]}
+        />,
+        "className": "start__wall",
       },
       "ref": null,
-      "rendered": null,
-      "type": "img",
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "gameStart": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      "type": "div",
     },
   ],
   Symbol(enzyme.__options__): Object {
@@ -66,5 +86,6 @@ ShallowWrapper {
       },
     },
   },
+  Symbol(enzyme.__childContext__): null,
 }
 `;
